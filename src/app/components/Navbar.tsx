@@ -6,9 +6,9 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="bg-gray-400 text-white py-4 fixed w-full z-10">
+    <div className=" text-white py-4 fixed w-full z-10">
       <nav>
-        <div className="container mx-auto flex justify-around items-center">
+        <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
             <div className="flex items-center">
               <Image src={Logo} alt="Logo" width={100} height={100} className="mr-2 rounded-lg" />
