@@ -6,34 +6,37 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className=" text-white py-4 fixed w-full z-10">
+    <div className="text-white fixed w-full z-10">
       <nav>
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="flex flex-row md:flex-row justify-between py-4 md:py-2 px-4 md:px-12">
+          {/* Logo and Brand */}
           <Link href="/">
             <div className="flex items-center">
-              <Image src={Logo} alt="Logo" width={100} height={100} className="mr-2 rounded-lg" />
-              <span className="text-xl font-bold">ModWebSolution</span>
+              <Image src={Logo} alt="Logo" width={100} height={100} className="rounded-full" />
+              <span className="text-base lg:text-lg font-semibold lg:font-bold ml-2">ModWebSolution</span>
             </div>
           </Link>
-          <div className="lg:flex lg:items-center lg:w-auto">
-            <div className="text-lg lg:flex-grow">
+
+          {/* Navigation Links */}
+          <div className="mt-4 md:mt-0">
+            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 lg:font-bold">
               <Link href="/">
-                <span className="block mt-4 lg:inline-block lg:mt-0 mr-4">Home</span>
+                <span className="block md:inline-block">Home</span>
               </Link>
               <Link href="/about">
-                <span className="block mt-4 lg:inline-block lg:mt-0 mr-4">About</span>
+                <span className="block md:inline-block">About</span>
               </Link>
               <Link href="/services">
-                <span className="block mt-4 lg:inline-block lg:mt-0 mr-4">Services</span>
+                <span className="block md:inline-block">Services</span>
               </Link>
               <Link href="/portfolio">
-                <span className="block mt-4 lg:inline-block lg:mt-0 mr-4">Portfolio</span>
+                <span className="block md:inline-block">Portfolio</span>
               </Link>
               <Link href="/technologies">
-                <span className="block mt-4 lg:inline-block lg:mt-0 mr-4">Technologies</span>
+                <span className="block md:inline-block">Technologies</span>
               </Link>
               <Link href="/contact">
-                <span className="block mt-4 lg:inline-block lg:mt-0">Contact</span>
+                <span className="block md:inline-block">Contact</span>
               </Link>
             </div>
           </div>

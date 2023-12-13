@@ -1,5 +1,6 @@
 // components/Portfolio.tsx
 import React from 'react';
+import Link from 'next/link';
 
 // Sample data for projects
 const projects = [
@@ -24,25 +25,18 @@ const projects = [
     technologies: ['Next.js', 'Python', 'Django'],
     images: ['/project2-image1.jpg', '/project2-image2.jpg'],
   },
-  {
-    id: 4,
-    name: 'Project Four',
-    description: 'A description of the second project.',
-    technologies: ['Next.js', 'Python', 'Django'],
-    images: ['/project2-image1.jpg', '/project2-image2.jpg'],
-  },
   // Add more projects as needed
 ];
 
 const Portfolio = () => {
   return (
-    <section className="bg-white text-gray-800 py-24">
+    <section className="bg-gray-800 text-gray-800 py-24">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-extrabold mb-12 text-center">Our Portfolio</h2>
+        <h2 className="text-4xl font-extrabold mb-12 text-center text-white">Our Portfolio</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-4">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white p-8 rounded-md shadow-lg">
+            <div key={project.id} className="bg-slate-500 p-8 rounded-md shadow-lg">
               <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
               <p className="text-lg mb-6">{project.description}</p>
               
@@ -71,9 +65,13 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+        <div className='text-center py-4'>
+          <Link href="/portfolio">
+            <span className="block md:inline-block font-bold text-slate-100">See More</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
 };
-
 export default Portfolio;
